@@ -1,50 +1,119 @@
 .product-details {
-    margin-top: 100px !important;
-  }
-  
-  .product-details-info {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-  }
-  
-  .product-details-info h6 {
-    margin-bottom: 20px !important;
-  }
-  
-  .similar-products .card {
-    background-color: rgba(128, 128, 128, 0.097);
-    width: 18rem;
-  }
-  
-  .similar-products .card-name-price {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .similar-products .card-price {
-    color: green;
-    font-weight: bold;
-  }
-  .similar-products button {
-    border-radius: 0;
-    width: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .similar-products .card-text {
-    color: rgb(90, 89, 89);
-  }
-  
-  .similar-products .card img:hover {
-    transform: scale(0.9);
-  }
-  
-  .similar-products .card-img-top {
-    height: 300px !important;
-  }
+  margin-top: 100px !important;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.product-details-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(145deg, #2d2d44 0%, #1f1f3a 100%);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+}
+
+.product-details-info h1 {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.product-details-info h6 {
+  margin-bottom: 20px !important;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.product-details-info .price {
+  color: #4ecdc4;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, #4ecdc4, #44a08d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.similar-products {
+  margin-top: 50px;
+}
+
+.similar-products h2 {
+  color: #ffffff;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.similar-products .card {
+  background: linear-gradient(145deg, #2d2d44 0%, #1f1f3a 100%);
+  width: 18rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.similar-products .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+}
+
+.similar-products .card-name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.similar-products .card-price {
+  color: #4ecdc4;
+  font-weight: bold;
+  background: linear-gradient(45deg, #4ecdc4, #44a08d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.similar-products button {
+  border-radius: 0;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.similar-products button:hover {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.similar-products .card-text {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 10px;
+}
+
+.similar-products .card img:hover {
+  transform: scale(0.95);
+}
+
+.similar-products .card-img-top {
+  height: 300px !important;
+  border-radius: 15px 15px 0 0;
+}

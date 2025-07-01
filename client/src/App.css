@@ -1,0 +1,85 @@
+/* App.css - Dark Theme */
+
+/* Global Dark Theme Styles */
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%);
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* Dark theme scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Container styles */
+.container-fluid {
+  background: transparent;
+}
+
+/* Text selection styles */
+::selection {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: #ffffff;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #4ecdc4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Toast notifications dark theme */
+.toast-dark {
+  background: linear-gradient(145deg, #2d2d44 0%, #1f1f3a 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Modal dark theme */
+.modal-dark {
+  background: linear-gradient(145deg, #2d2d44 0%, #1f1f3a 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.modal-dark .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-dark .modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

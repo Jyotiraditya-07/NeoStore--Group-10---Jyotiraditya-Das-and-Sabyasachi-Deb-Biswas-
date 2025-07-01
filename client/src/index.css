@@ -1,105 +1,293 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,700;1,5..1200,700&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,400;0,5..1200,600;0,5..1200,700;1,5..1200,400;1,5..1200,600;1,5..1200,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
 /* font-family: "Playfair", serif; */
 /* font-family: "Poppins", sans-serif; */
+/* font-family: "Roboto", sans-serif; */
 
-
-/* //navbar css */
+/* //navbar css - Dark Theme */
 .navbar {
   font-family: "Poppins", sans-serif;
   font-size: 17px;
   line-height: 26px;
   text-transform: uppercase;
-  box-shadow: 0 8px 6px -6px gray;
-  --webkit-box-shadow: 0 8px 6px -6px gray;
-  border-bottom: solid gray !important;
+  background: linear-gradient(145deg, #2d2d44 0%, #1f1f3a 100%) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  --webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid transparent !important;
+  border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4) 1 !important;
+  backdrop-filter: blur(10px);
 }
 
-.nav-link {
-  font-weight: 300 !important;
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 400 !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4ecdc4 !important;
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  border-radius: 2px;
 }
 
 .active {
-  border-bottom: 2px solid black;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  border-bottom: 2px solid #4ecdc4 !important;
 }
 
 .navbar-brand {
   font-weight: 700;
-  font-family: "roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 3px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 
+.navbar-brand:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Footer - Dark Theme */
 .footer {
   color: white;
-  padding: 25px;
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #434343, #000000);
+  padding: 30px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 75%, #1a1a2e 100%);
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4) 1;
+  margin-top: 50px;
 }
 
 .footer a {
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   padding: 10px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
 }
 
 .footer a:hover {
-  color: #ffefba;
-  border-bottom: 1px solid #ffefba;
+  color: #4ecdc4;
+  background: rgba(78, 205, 196, 0.1);
+  border-bottom: 2px solid #4ecdc4;
+  transform: translateY(-2px);
 }
 
+/* Page Not Found - Dark Theme */
 .pnf {
   display: flex;
   min-height: 65vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%);
+  color: #ffffff;
 }
 
 .pnf-title {
   font-size: 100px;
   font-weight: 700;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 20px rgba(255, 107, 107, 0.5));
+  }
+  to {
+    filter: drop-shadow(0 0 30px rgba(78, 205, 196, 0.8));
+  }
 }
 
 .pnf-heading {
   font-weight: normal;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .pnf-btn {
-  color: black;
-  border: 1px solid black;
-  text-decoration: none;
-  padding: 10px;
-  margin-top: 10px;
-}
-.pnf-btn:hover {
-  background-color: black;
   color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  text-decoration: none;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
+
+.pnf-btn:hover {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(240, 147, 251, 0.4);
+}
+
 /* ========================================= */
-/* =========contact us ========= */
+/* =========contact us - Dark Theme ========= */
 .contactus {
   margin: 0;
-  padding: 0;
-  height: 70vh;
+  padding: 20px;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%);
+  color: #ffffff;
 }
 
+.contactus .container {
+  background: linear-gradient(145deg, #2d2d44 0%, #1f1f3a 100%);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
 
+.contactus h1 {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Playfair", serif;
+}
 
+.contactus .form-control {
+  background: linear-gradient(135deg, #3d3d5c 0%, #2a2a4a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.contactus .form-control:focus {
+  background: linear-gradient(135deg, #3d3d5c 0%, #2a2a4a 100%);
+  border-color: #4ecdc4;
+  box-shadow: 0 0 15px rgba(78, 205, 196, 0.3);
+  color: #ffffff;
+}
+
+.contactus .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contactus .btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 30px;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contactus .btn:hover {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4);
+}
+
+/* Product Links - Dark Theme */
 .product-link {
   text-decoration: none !important;
-  color: black !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s ease;
+}
+
+.product-link:hover {
+  color: #4ecdc4 !important;
+  transform: translateY(-2px);
+}
+
+/* Additional Dark Theme Utilities */
+.text-gradient {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-dark-card {
+  background: linear-gradient(145deg, #2d2d44 0%, #1f1f3a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pnf-title {
+    font-size: 60px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .contactus .container {
+    padding: 20px;
+    margin: 10px;
+  }
 }
